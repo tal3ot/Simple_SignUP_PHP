@@ -9,32 +9,32 @@ function signup_inputs() {
             if (isset($_SESSION["signup_data"]["username"]) && !isset($_SESSION["errors_signup"]["username_taken"])) {
 				
                 // the label of user name
-                echo '<label for="username">Username</label>';
+                echo '<strong>Username:</strong>';
                 // Right data stay in the box and wrong vanished to write it again
                 echo '<input type="text" name="username" placeholder="Enter your username" 
                         value = "' . $_SESSION["signup_data"]["username"] . '" >';
 						
             //if it's not the case and we don't have any sort of wrong data or error message then we show the regular output            
             } else {
-            echo '<label for="username">Username</label>'; //Just the label
+            echo '<strong>Username:</strong>'; //Just the label
             echo '<input type="text" name="username" placeholder="Enter your username">';
             }
 
 
             //2- the password as we don't want to show it back even if it's wrong
-            echo '<label for="pwd">Password</label>'; //Just the label
+            echo '<strong>Password:</strong>'; //Just the label
             echo '<input type="text" name="pwd" placeholder="Enter your password">';
 
             //3- like what we did in username if the mail is already wrote in the box and it's vaild and not taken before (not an error)
             if (isset($_SESSION["signup_data"]["email"]) && !isset($_SESSION["errors_signup"]["email_invalid"]) 
                 && !isset($_SESSION["errors_signup"]["email_registered"])) {
 
-                echo '<label for="email">E-mail</label>'; //Just the label
+                echo '<strong>E-mail:</strong>'; //Just the label
                 echo '<input type="text" name="email" placeholder="Enter your E-mail" 
                         value = "' . $_SESSION["signup_data"]["email"] . '" >';
                 //if it's not the case and we don't have any sort of wrong data or error message then we show the regular output            
                 } else {
-                echo '<label for="email">E-mail</label>'; //Just the label
+                echo '<strong>E-mail:</strong>'; //Just the label
                 echo '<input type="text" name="email" placeholder="Enter your E-mail">';
                 }
 
@@ -42,13 +42,13 @@ function signup_inputs() {
                 if (isset($_SESSION["signup_data"]["phoneNum"]) && !isset($_SESSION["errors_signup"]["phone_wrong"]) 
                 && !isset($_SESSION["errors_signup"]["phone_registered"])) {
 
-                echo '<label for="phoneNum">Phone Number</label>'; //Just the label
+                echo '<strong>Phone Number:</strong>'; //Just the label
                 echo '<input type="text" name="phoneNum" placeholder="Enter Your Phone Number" 
                         value = "' . $_SESSION["signup_data"]["phoneNum"] . '" >';
                         
                 //if it's not the case and we don't have any sort of wrong data or error message then we show the regular output output            
                 } else {
-                echo '<label for="phoneNum">Phone Number</label>'; //Just the label
+                echo '<strong>Phone Number:</strong>'; //Just the label
                 echo '<input type="text" name="phoneNum" placeholder="Enter Your Phone Number">';
                 }
 
