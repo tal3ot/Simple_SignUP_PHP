@@ -15,7 +15,7 @@ session_set_cookie_params([
 session_start();
  
 // to regenerate the cookies every 30 min 
-if (isset($_SESSION["last_regeneration"])) {
+if (!isset($_SESSION["last_regeneration"])) {
 
     regeneration_session_id(); 
 } else {
